@@ -1,0 +1,3 @@
+# Module krabiproject
+# RPC service class, partial path of RPC policy file
+th.ac.utcc.KrabiProject.client.GreetingService, 01E151EC8D118D453F80B442DA26E081.gwt.rpc
