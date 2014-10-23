@@ -1,4 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" import="java.sql.*" errorPage="" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" import="java.io.*, java.sql.*" errorPage="" %>
+<% request.setCharacterEncoding("UTF-8");%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -7,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css">    
-  <link rel="stylesheet" type="text/css" href="css/form.css" />
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap-theme.css"> 
   <script src="jquery.mobile-1.3.2.min.js"></script>
@@ -23,8 +23,8 @@
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
           <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
           <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="5"></li>
         </ol>
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
@@ -85,7 +85,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand"> <img src="img/surf-icon.png" width="25" height="25"><font color="#33CCFF">Krabi</font>
+    <a class="navbar-brand"><img src="img/surf-icon.png" width="25" height="25"><font color="#33CCFF">Krabi</font>
     </a>
   </div>
   <div class="collapse navbar-collapse">
@@ -101,11 +101,11 @@
    <ul class="nav navbar-nav navbar-right">
    <% String getusername_ses = (String)session.getAttribute("username_ses");
    	  String getfirstname_ses = (String)session.getAttribute("firstname_ses");
-      String getlastname_ses = (String)session.getAttribute("lastname_ses");
+      //String getlastname_ses = (String)session.getAttribute("lastname_ses");
 	  if(getusername_ses==null) { %>
 	  <li><a href="formlogin.html">Sing in</a></li>
 	  <% } else { %>
-	  <li><a href="logout.jsp"><span class="glyphicon glyphicon-user"></span> &nbsp;<%=getfirstname_ses%> (Log out)</a></a>
+	  <li><a href="logout.jsp"><span class="glyphicon glyphicon-user"></span> &nbsp;<%=getfirstname_ses%> (Log out)</a>
 	         <% } %>
     </ul>
  </div>
@@ -114,11 +114,11 @@
 <section> 
   <div class="row">
     <div class="col-md-12">
-      <marquee behavior="scroll"><font color="#4F94CD" size="5">คำขวัญจังหวัดกระบี่ : </font><font size="4">แหล่งถ่านหิน   ถิ่นหอยเก่า  เขาตระหง่าน   ธารสวย    รวยเกาะ   เพาะปลูกปาล์ม   งามหาดทราย   ใต้ทะเลสวยสด   มรกตอันดามัน  สวรรค์เกาะพีพี</font></marquee>
+      <marquee behavior="scroll" scrolldelay="100" id="scroll"><div id="result"></div></marquee>
     </div>
-  </div><br>
+  </div>
   <br>
-
+  <br>
   <div class="row">
     <div class="col-md-3">
       <div class="panel panel-default">
@@ -229,13 +229,24 @@
 <footer>
   <br>
   <hr>
-  <p>&copy; Computer Science @ The University of the Thai Chamber of Commerce</p>            
+  <p>&copy; BEE&KWANG || Computer Science @ The University of the Thai Chamber of Commerce</p>            
 </footer>  
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
-$(document).ready(function (){
+$(document).ready(function(){
   $(".tool").tooltip();
+
+  var xmlhttp = new XMLHttpRequest();//สร้าง object 
+	xmlhttp.onreadystatechange=function(){ //จับ event พอเกิด event ให้เรียก functionไม่มีชื่อ
+		if(xmlhttp.readyState==4 && xmlhttp.status==200){
+			document.getElementById("result").innerHTML = xmlhttp.responseText;//ใช่ domเข้าถึง <div>ผ่าน ID=resultโดยต้องการเปลี่ยนค่าที่ <div>
+		}
+	}
+	var url = "loadtext.jsp";
+	//เปิด connection
+	xmlhttp.open("GET",url,true);
+	xmlhttp.send();
 });
 </script>
 </body>

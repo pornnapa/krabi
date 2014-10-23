@@ -5,9 +5,11 @@
 	margin: 0 auto;
 	width: 1000px;
 	margin-top: 55px;
-	
+	margin-left: 0 auto;
+	margin-right: 0 auto;	
 }
 #mainlogin{
+	width: 1000px;
 	margin: 0 auto;
 	width: 1000px;
 }
@@ -16,24 +18,24 @@
 	margin-right: 0 auto;
 	margin-top: 15px;
 }
-
 #nav-bar{
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
 }
-
 #manu{
 	margin-left: 50px;
 	margin-right: 50px;
 	margin-top: 15px;
 }
 #provider{
-	margin-top: 30px;
-	
+	margin-top: 30px;	
 }
 #imgheaderlogin{
 	margin-top: 100px;
+}
+#scroll{
+	margin-top: 30px;
 }
 
 

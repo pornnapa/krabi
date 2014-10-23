@@ -24,7 +24,7 @@
     <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
   </system-properties>
   
-  <sessions-enabled>true</sessions-enabled> <!--//เปิดเพื่อให้ใช้งาน session ได้ อจ ไม่ได้บอกไว้-->
+  <sessions-enabled>true</sessions-enabled><!--//เปิดเพื่อให้ใช้งาน session ได้ อจ ไม่ได้บอกไว้-->
 
   <!--
     HTTP Sessions are disabled by default. To enable HTTP sessions specify:
