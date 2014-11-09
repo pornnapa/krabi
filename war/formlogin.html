@@ -9,40 +9,64 @@
   <link rel="stylesheet" type="text/css" href="css/form.css" />
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap-theme.css"> 
-  <script src="jquery.mobile-1.3.2.min.js"></script>
+  <script src="js/jquery.mobile-1.3.2.min.js"></script>
+  <script src="js/action.js"></script>
   <script src="phonegap.js"></script> 
 </head>
 <body id="mainlogin">
  
   <header class="imgheaderlogin" >
-   <center>
+   
     <div class="row">
       <div class="col-md-12">
-        <img src="img/login.jpg" width="1000"></center>
-      </div>
-    </div>
+        <center><img src="img/login.jpg" width="1000"></center>
+ 		</div>
+ 	</div>   
   </header>
-
- <section id="provider">
+  
+<section id="provider">
+<div class="panel panel-default">
+  <div class="panel-body">
+    <a href="index.jsp" class="alert-link">หน้าหลัก</a> / Sing in
+  </div>
+</div>
+ <form method="get" action="actionlogin.jsp">
+ 	<div class="row">
+ 		<div class="col-md-4">
+ 		</div>
+ 		<div class="col-md-4">
+			<div class="row">
+				<div class="col-md-4">
+					<label for="userName">User Name :</label>
+				</div>
+				<div class="col-md-8">
+					<input type="text" name="userName" class="form-control" size="30" placeholder="userame">
+				</div>
+			</div>
+ 		</div>
+ 		<div class="col-md-4">
+ 		</div>
+ 	</div><br>
  
-  <form method="get" action="actionlogin.jsp">
-        <center><div class="ui-field-contain">
-          <label for="userName">User Name :</label>
-          <input type="text" name="userName" id="username" size="30" placeholder="userame?">
-        </div></center>
-        <center><div class="ui-field-contain">
-          <label for="pwd">Password : &nbsp;</label>
-          <input type="password" name="pwd" id="passwprd" size="30" placeholder="password?">
-        </div></center>
-        <center><button type="submit" class="btn btn-primary" data-inline="true">Sign in</button></center>
-        
-      </form>
-
-
-
-
- </section> 
- 
+ 	<div class="row">
+ 		<div class="col-md-4">
+ 		</div>
+ 		<div class="col-md-4">
+			<div class="row">
+				<div class="col-md-4">
+					<label for="pwd">Password : &nbsp;</label>
+				</div>
+				<div class="col-md-8">
+					<input type="password" name="pwd" class="form-control" size="30" placeholder="password">
+				</div>
+			</div>
+ 		</div>
+ 		<div class="col-md-4">
+ 		</div>
+ 	</div><br>
+ 	<center><button type="submit" class="btn btn-primary" data-inline="true">Sign in</button></center>
+ </form>
+ </section>  
 <footer>
   <br>
   <hr>

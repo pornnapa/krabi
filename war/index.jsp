@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css">    
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap-theme.css"> 
-  <script src="jquery.mobile-1.3.2.min.js"></script>
+  <script src="js/jquery.mobile-1.3.2.min.js"></script>
+  <script src="js/action.js"></script>
   <script src="phonegap.js"></script> 
 </head>
+
 <body id="main">
  <header>
   <div class="row">
@@ -92,7 +94,7 @@
     <ul class="nav navbar-nav">
      <li class="active"><a href="index.html"><img src="img/home-icon.png"> หน้าหลัก</a></li>
      <li><a href="#"><img src="img/cocktail-icon.png"> ที่กิน</a></li>
-     <li><a href="#"><img src="img/palm-tree-icon.png"> ที่เที่ยว</a></li>
+     <li><a href="travel.jsp"><img src="img/palm-tree-icon.png"> ที่เที่ยว</a></li>
      <li><a href="#"><img src="img/hotel-icon.png"> ที่พัก</a></li>
      <li><a href="#"><img src="img/Phone-icon.png"> หมายเลขโทรศัพท์</a></li>
      <li><a href="#"><img src="img/maps-icon.png"> แผนที่ท่องเที่ยว</a></li>

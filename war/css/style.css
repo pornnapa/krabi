@@ -1,17 +1,18 @@
 @charset "utf-8";
-/* CSS Document */
-
+body{
+	background-image: url(img/background.jpg) no-repeat center fixed;
+	background-size:cover;
+}
 #main{
 	margin: 0 auto;
 	width: 1000px;
 	margin-top: 55px;
 	margin-left: 0 auto;
-	margin-right: 0 auto;	
+	margin-right: 0 auto;		
 }
 #mainlogin{
 	width: 1000px;
 	margin: 0 auto;
-	width: 1000px;
 }
 #container{
 	margin-left: 0 auto;
@@ -36,6 +37,9 @@
 }
 #scroll{
 	margin-top: 30px;
+}
+#travel{
+	margin-left: 50px;
 }
 
 

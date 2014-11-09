@@ -17,6 +17,6 @@
 		session.setAttribute("firstname_ses" ,firstname);
 		response.sendRedirect("index.jsp");
 	}else{
-		out.println("กรุณาตรวจสอบ username และ password อีกครั้ง!!!");
-}
-%>
+		out.println("กรุณาตรวจสอบ username และ password อีกครั้ง!!!");%><br><br>
+		<a href="formlogin.html"><button class="btn btn-primary" data-inline="true">Sign in</button></a>
+<%}%>
